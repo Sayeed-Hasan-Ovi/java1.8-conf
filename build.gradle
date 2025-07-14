@@ -26,19 +26,19 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeOnly 'mysql:mysql-connector-java:8.0.15'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Without this, 69M
+	runtimeOnly 'mysql:mysql-connector-java:8.0.15' // Without this, 79M
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testAnnotationProcessor 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok' // Without this, 81M, 4 lines of lombok
 	testCompileOnly 'org.projectlombok:lombok'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
-	compile 'io.springfox:springfox-swagger2:2.9.2'
+	compile 'io.springfox:springfox-swagger2:2.9.2' // Without this, 78M
 	compile 'io.springfox:springfox-swagger-ui:2.9.2'
 //	implementation project(':oauthResourceServer')
-	compile 'org.apache.poi:poi-ooxml:4.1.2'
+	compile 'org.apache.poi:poi-ooxml:4.1.2' // Without this, 63M
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-amqp
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.5.6'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.5.6' // Without this, 80M
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-zuul', version: '2.1.5.RELEASE'
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-oauth2', version: '2.1.5.RELEASE'
 }
