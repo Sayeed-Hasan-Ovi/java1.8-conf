@@ -1,0 +1,16 @@
+// {
+//   "name": "Java 8 Codespace",
+//   "image": "mcr.microsoft.com/devcontainers/java:0-8",
+//   "extensions": [
+//     "vscjava.vscode-java-pack"
+//   ],
+//   "postCreateCommand": "sdk install java 8.0.202-zulu && sdk default java 8.0.202-zulu"
+// }
+
+{
+  "name": "Alpine + Java 8 Codespace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "java -version"
+}
