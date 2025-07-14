@@ -16,6 +16,10 @@ configurations {
 	}
 }
 
+bootJar {
+    mainClassName = 'Aml360Application'
+}
+
 repositories {
 	mavenCentral()
 	maven{url "http://jasperreports.sourceforge.net/maven2/"}
